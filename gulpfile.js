@@ -18,6 +18,7 @@ var paths = {};
 paths.build = "./build/";
 paths.deploy = "./deploy/";
 paths.project = "./src/";
+
 paths.public = paths.project + "public/";
 paths.private = paths.project + "private/";
 paths.server = paths.project + "server/";
@@ -99,7 +100,7 @@ gulp.task("compile-client", ["bundle-ng-files", "compile-sass"],
     {
         return gulp.src(paths.public + "**")
             .pipe(plugins.debug({title: "[web] copied:"}))
-            .pipe(gulp.dest(paths.build + "client-web/"));
+            .pipe(gulp.dest(paths.build + "public/"));
     });
 
 // Bundle AngularJS files
