@@ -1,11 +1,23 @@
-(function() {
+(function ()
+{
+    'use strict';
+    
+    angular
+        .module('app', [
+            'ui.router'
+        ]);
+})();
+(function ()
+{
     'use strict';
 
+    configureRoutes.$inject = ["$stateProvider", "$urlRouterProvider"];
     angular
         .module('app')
-        .config(['$stateProvider', '$urlRouterProvider', configureRoutes]);
+        .config(configureRoutes);
 
-    function configureRoutes($stateProvider, $urlRouterProvider) {
+    function configureRoutes($stateProvider, $urlRouterProvider)
+    {
         $urlRouterProvider
             .otherwise('/');
 
@@ -16,23 +28,23 @@
             })
             .state('about', {
                 url: '/about',
-                templateUrl: '/app/templates/about.html'
+                templateUrl: 'views/about.html'
             })
             .state('blog', {
                 url: '/blog',
-                templateUrl: '/app/templates/blog.html'
+                templateUrl: 'views/blog.html'
             })
             .state('projects', {
                 url: '/projects',
-                templateUrl: '/app/templates/projects.html'
+                templateUrl: 'views/projects.html'
             })
             .state('login', {
                 url: '/login',
-                templateUrl: '/app/templates/login.html'
+                templateUrl: 'views/login.html'
             })
             .state('signup', {
                 url: '/signup',
-                templateUrl: '/app/templates/signup.html'
+                templateUrl: 'views/signup.html'
             });
     }
 })();

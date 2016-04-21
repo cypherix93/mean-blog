@@ -117,7 +117,7 @@ gulp.task("bundle-ng-files",
 
         var angularTemplates = paths.angular + "templates/**/*.html";
 
-        var angularDest = paths.public + "angular/";
+        var angularDest = paths.public + "js/angular/";
 
         var scripts = gulp.src(angularScripts)
             .pipe(plugins.debug({title: "angular app:"}))
@@ -314,6 +314,9 @@ gulp.task("bower-install", ["bower-restore"],
 /*
  Development Specific Tasks
  ------------------------------------------------------------------------------*/
+
+// Watch server files for changes
+gulp.task("watch", ["watch-server", "watch-client"]);
 
 // Watch server files for changes
 gulp.task("watch-server",
