@@ -2,9 +2,9 @@
   "name": "mean-blog",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "author": "Luis Felipe Hernandez",
+  "license": "",
+  "description": "MEAN stack Blog",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.13.2",
@@ -22,9 +22,5 @@
     "passport-twitter": "^1.0.4",
     "serve-favicon": "~2.3.0"
   },
-  "main": "app.js",
-  "devDependencies": {},
-  "author": "Luis Felipe Hernandez",
-  "license": "",
-  "description": "MEAN stack Blog"
+  "devDependencies": {}
 }
