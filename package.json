@@ -1,10 +1,11 @@
 {
   "name": "mean-blog",
   "version": "0.0.0",
-  "author": "Luis Felipe Hernandez",
+  "authors": "Luis Felipe Hernandez",
   "description": "MEAN stack Blog",
   "license": "",
   "private": true,
+  "copyright": "Copyright © 2016",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.13.2",
@@ -26,9 +27,10 @@
     "bower": "^1.7.2",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
     "gulp-batch": "^1.0.5",
+    "gulp-clean-css": "^2.0.6",
     "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.0",
     "gulp-debug": "^2.1.2",
     "gulp-filter": "^3.0.1",
     "gulp-htmlmin": "^1.3.0",
@@ -48,6 +50,7 @@
     "main-bower-files": "^2.11.1",
     "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.5",
+    "streamqueue": "^1.1.1",
     "typescript": "^1.7.5"
   }
 }

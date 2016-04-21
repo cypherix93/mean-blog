@@ -9,6 +9,7 @@ var plugins = require("gulp-load-plugins")();
 // NPM Tools
 var runSequence = require("run-sequence");
 var merge = require("merge-stream");
+var streamqueue = require("streamqueue");
 var del = require("del");
 var mainBowerFiles = require("main-bower-files");
 
@@ -82,9 +83,13 @@ gulp.task("clean",
 gulp.task("compile-server",
     function ()
     {
+        var jsFilter = plugins.filter("**/*.js", {restore: true});
+
         return gulp.src(paths.project + "server/**")
+            .pipe(jsFilter)
             .pipe(plugins.debug({title: "[server] compiled:"}))
             .pipe(plugins.uglify())
+            .pipe(jsFilter.restore)
             .pipe(gulp.dest(paths.build + "server/"));
     });
 
@@ -121,7 +126,7 @@ gulp.task("bundle-ng-files",
 
         var templates = gulp.src(angularTemplates)
             .pipe(plugins.debug({title: "angular templates:"}))
-            .pipe(plugins.minifyHtml())
+            .pipe(plugins.htmlmin())
             .pipe(plugins.angularTemplatecache("angular-templates.js",
                 {
                     module: "MainApp",
@@ -277,7 +282,7 @@ gulp.task("bower-install", ["bower-restore"],
             .pipe(plugins.debug({title: "css:"}))
             .pipe(plugins.rename(generatePath))
             .pipe(gulp.dest(libDir))
-            .pipe(plugins.cssnano())
+            .pipe(plugins.cleanCss())
             .pipe(plugins.rename({
                 suffix: ".min"
             }))
