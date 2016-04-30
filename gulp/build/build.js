@@ -9,7 +9,7 @@ module.exports = function (gulp, plugins, paths)
     {
         runSequence(
             "clean",
-            ["compile-server", "compile-client"],
+            "compile",
             callback
         );
     });
