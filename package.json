@@ -21,7 +21,9 @@
     "passport-facebook": "^2.1.0",
     "passport-google-oauth": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "serve-favicon": "~2.3.0"
+    "routing-controllers": "^0.5.7",
+    "serve-favicon": "~2.3.0",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {
     "bower": "^1.7.2",
@@ -51,6 +53,6 @@
     "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.5",
     "streamqueue": "^1.1.1",
-    "typescript": "^1.7.5"
+    "typescript": "^1.8.10"
   }
 }
