@@ -2,6 +2,7 @@
 /// <reference path="main/ambient/body-parser/index.d.ts" />
 /// <reference path="main/ambient/cookie-parser/index.d.ts" />
 /// <reference path="main/ambient/cors/index.d.ts" />
+/// <reference path="main/ambient/express-serve-static-core/index.d.ts" />
 /// <reference path="main/ambient/express/index.d.ts" />
 /// <reference path="main/ambient/jsonwebtoken/index.d.ts" />
 /// <reference path="main/ambient/lodash/index.d.ts" />

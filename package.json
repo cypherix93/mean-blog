@@ -22,7 +22,8 @@
     "passport-google-oauth": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "routing-controllers": "^0.5.7",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {
     "bower": "^1.7.2",
