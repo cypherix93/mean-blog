@@ -12,8 +12,8 @@ pids
 .lock-wscript
 
 # Compiled binary addons
-build
-deploy
+/build
+/deploy
 
 # Dependency directory
 node_modules
